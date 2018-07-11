@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="test">
+            <span>메시지: {{ msg }}</span><br>
+            <span v-once>다시는 변경하지 않습니다: {{ msg }}</span><br>
+            <input type="text" name="test" id="test" v-model='msg'>
+            <p>Using v-html directive: <span v-html="msg"></span></p>
+            <button :disabled="isButtonDisabled" @click="btn_disabled">버튼</button><br>
+            <span>num : {{num}}</span><br>
+            <span>num +1 : {{num+1}}</span><br>
+            <span>{{ 1 > 2 ? 'YES' : 'NO' }}</span><br>
+            <span>{{ msg.split('').reverse().join('') }}</span><br>
+            <div :id=" 'list_'+num ">v-bind 속성</div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
