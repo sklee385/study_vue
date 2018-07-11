@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ foo }}</p>
+            <!-- obj.foo는 더이상 변하지 않습니다! -->
+            <button v-on:click="foo= 'baz'">Change it</button>
+        </div>
+        <div id="example">
+            <p>{{a}}</p>
+            <input type="text" name="a" id="a" v-model='a'>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
