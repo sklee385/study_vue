@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <style>
+    .a{border: 1px solid ;}
+    </style>
+    <body>
+        <div id="test" :class="{a : is_a}">
+            {{msg}}
+            <button @click="onclick">click</button>
+        </div>
+        <div id="test2" :class="classObj">123
+        </div>
+        <div id='test3' :class="[activeClass, errorClass]"></div>
+        <my-component :class="classobj"></my-component>
+        <div id='test4' v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">123</div>
+        <div id='test5' v-bind:style="styleObject">123</div>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
