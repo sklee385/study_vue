@@ -17,26 +17,50 @@
                 <p>Paragraph 2</p>
             </template>
             <!-- v-else -->
-            <div v-if="Math.random() > 0.5">
+            <div v-if="Math.random()> 0.5">
                 이제 나를 볼 수 있어요
             </div>
             <div v-else>
                 이제는 안보입니다
             </div>
             <!-- v-else-if -->
-            <div v-if="type === 'A'">
+            <div v-if="type=== 'A'">
                 A
             </div>
-            <div v-else-if="type === 'B'">
+            <div v-else-if="type=== 'B'">
                 B
             </div>
-            <div v-else-if="type === 'C'">
+            <div v-else-if="type=== 'C'">
                 C
             </div>
             <div v-else>
                 Not A/B/C
             </div>
-            
+            <div>
+                키 적용 후 
+                <template v-if="loginType === 'username'">
+                    <label>사용자 이름</label>
+                    <input placeholder="사용자 이름을 입력하세요" key="username-input">
+                </template>
+                <template v-else>
+                    <label>이메일</label>
+                    <input placeholder="이메일 주소를 입력하세요" key="email-input">
+                </template>
+            </div>
+            <div>
+                키 적용 전
+                <template v-if="loginType === 'username'">
+                    <label>사용자 이름</label>
+                    <input placeholder="사용자 이름을 입력하세요" >
+                </template>
+                <template v-else>
+                    <label>이메일</label>
+                    <input placeholder="이메일 주소를 입력하세요" >
+                </template>
+            </div>
+            <button @click="change_input()">click</button>
+
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>

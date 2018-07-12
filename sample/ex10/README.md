@@ -45,7 +45,21 @@
     자주 변경시에는 v-show 
     자주 변경되지 않을시에는 v-if 
 
-6. 기타 
+6. key 
+    키를 적용 안시키면 input에 입력한 값이 조건문이 바뀌어도 그대로 남아 있는다 .
+    input 에 name 지정할 떄 같이 지정하는 것이 좋을 듯
+    ```html
+    <template v-if="loginType === 'username'">
+        <label>사용자 이름</label>
+        <input placeholder="사용자 이름을 입력하세요" key="username-input">
+    </template>
+    <template v-else>
+        <label>이메일</label>
+        <input placeholder="이메일 주소를 입력하세요" key="email-input">
+    </template>
+    ```
+
+7. 기타 
     v-if와 v-for를 함께 사용하는 경우 v-for는 v-if보다 높은 우선 순위를 가진다.
-    
+
 
