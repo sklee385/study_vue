@@ -39,3 +39,13 @@
         <p>Paragraph 2</p>
     </template>
     ```
+5. v-show
+    css 기반 토글   
+    display : none 처리     
+    자주 변경시에는 v-show 
+    자주 변경되지 않을시에는 v-if 
+
+6. 기타 
+    v-if와 v-for를 함께 사용하는 경우 v-for는 v-if보다 높은 우선 순위를 가진다.
+    
+
