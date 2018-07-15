@@ -183,7 +183,12 @@
     ```
 
 8. v-for 템플릿 
-    - v-if 와 마찬가지로 <template>태그를 사용해 여러 엘리먼트 블럭을 렌더링 할 수 있다.
+    - v-if 와 마찬가지로 \<template\>태그를 사용해 여러 엘리먼트 블럭을 렌더링 할 수 있다.
     ```html
-
+    <ul>
+        <template v-for="item in items">
+            <li>{{ item.msg }}</li>
+            <li class="divider"></li>
+        </template>
+    </ul>
     ```
