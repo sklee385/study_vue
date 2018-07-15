@@ -46,7 +46,7 @@
     자주 변경되지 않을시에는 v-if 
 
 6. key 
-    키를 적용 안시키면 input에 입력한 값이 조건문이 바뀌어도 그대로 남아 있는다 .
+    키를 적용 안시키면 input에 입력한 값이 조건문이 바뀌어도 input 값 그대로 남아 있는다 .
     input 에 name 지정할 떄 같이 지정하는 것이 좋을 듯
     ```html
     <template v-if="loginType === 'username'">
