@@ -24,6 +24,15 @@
             <br>
             <div @click.ctrl="submit">Do something</div>
             <div @click.right="submit">Do something</div>
+
+            <!-- Alt 또는 Shift와 함께 눌린 경우에도 실행됩니다. -->
+            <button @click.ctrl="submit">A</button>
+
+            <!-- Ctrl 키만 눌려있을 때만 실행됩니다. -->
+            <button @click.ctrl.exact="submit">A</button>
+
+            <!-- 아래 코드는 시스템 키가 눌리지 않은 상태인 경우에만 작동합니다. -->
+            <button @click.exact="submit">A</button>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="./index.js"></script>

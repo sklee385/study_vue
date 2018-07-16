@@ -52,6 +52,8 @@
     > keyup.alt.67 같이 키조합도 가능   
     > click.ctrl 같이 키보드 마우스 조합도 가능     
     > click.right 같이 마우스 오른쪽 키 이벤트 등도 가능
+    > exact 속성을 이용해서 특정키만 눌렸을 경우 동작하게 할 수 있다.
+
     ```html
     <input v-on:keyup.enter="submit">
     <br>
@@ -60,5 +62,14 @@
     <br>
     <div @click.ctrl="submit">Do something</div>
     <div @click.right="submit">Do something</div>
+
+    <!-- Alt 또는 Shift와 함께 눌린 경우에도 실행됩니다. -->
+    <button @click.ctrl="submit">A</button>
+
+    <!-- Ctrl 키만 눌려있을 때만 실행됩니다. -->
+    <button @click.ctrl.exact="submit">A</button>
+
+    <!-- 아래 코드는 시스템 키가 눌리지 않은 상태인 경우에만 작동합니다. -->
+    <button @click.exact="submit">A</button>
     ```
     
