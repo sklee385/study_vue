@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="test">
+            <input v-model="message" placeholder="여기를 수정해보세요">
+            <p>메시지: {{ message }}</p>
+
+            <span>여러 줄을 가지는 메시지:</span>
+            <p style="white-space: pre-line">{{ msg }}</p>
+            <br>
+            <textarea v-model="msg" placeholder="여러줄을 입력해보세요"></textarea>
+            
+            <br>
+            <input type="checkbox" id="checkbox" v-model="checked" > 
+            <label for="checkbox">{{ checked }}</label>
+            <br>
+
+            <input type="checkbox" id="jack" :value="msg" v-model="checkedNames">
+            <label for="jack">{{ msg }}</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>체크한 이름: {{ checkedNames }}</span>
+
+            <br>
+            <input type="radio" id="one" value="One" v-model="picked">
+            <label for="one">One</label>
+            <br>
+            <input type="radio" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+            <br>
+            <span>선택: {{ picked }}</span>
+            
+            <br>
+            <select v-model="selected">
+                <option disabled value="">Please select one</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>선택함: {{ selected }}</span>
+            <br>
+
+            <select v-model="selected2" multiple>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <br>
+            <span>Selected: {{ selected2 }}</span>
+            <br>
+
+            <select v-model="selected3">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <span>Selected: {{ selected3 }}</span>
+            <br>
+            <!-- 값 바인딩하기 -->
+            <!-- `picked` 는 선택시 문자열 "a" 입니다 -->
+            <input type="radio" v-model="picked" value="a">
+            <br>
+            <!-- `toggle` 는 true 또는 false 입니다 -->
+            <input type="checkbox" v-model="toggle" id='a' value='1' >
+            <!-- 체크박스  -->
+            <input type="checkbox" v-model="toggle2" id='b' true-value="yes" false-value="no">
+            {{toggle}} {{toggle2}}
+            <br>
+            <!-- `selected`는 "ABC" 선택시 "abc" 입니다 -->
+            <select v-model="selected">
+                <option value="abc">ABC</option>
+            </select>
+
+            <br>
+            <input v-model.number="age" type="">
+            
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
