@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="example">
+            <my-component></my-component>
+        </div>
+        <div id="example2">
+            <my-component2></my-component2>
+        </div>
+        <table id="table">
+            <tr is='row'></tr>
+        </table>
+
+        <div id="example-2">
+            <simple-counter></simple-counter>
+            <simple-counter></simple-counter>
+            <simple-counter></simple-counter><br>
+
+            <child message="안녕하세요!" my-msg='안녕'></child>
+
+            <input v-model="parentMsg">
+            <br>
+            <child v-bind:my-message="parentMsg"></child>
+            <br>
+            <child2 v-bind="todo"></child2>
+            <br>
+            <br>
+            <child3 test="1"></child3>
+            <br>
+            <child4 v-bind:test="1" ></child4>
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

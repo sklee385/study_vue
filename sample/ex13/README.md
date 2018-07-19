@@ -78,3 +78,19 @@ new Vue({
     <span>선택: {{ picked }}</span>
     ```    
 
+5. 수식어
+    1. lazy
+        - change 이벤트후 동작
+        ```html
+        <input v-model.lazy="msg" >
+        ```
+    2. number   
+        - 숫자만 입력
+        ```html
+        <input v-model.number="msg" >
+        ```
+    3. trim
+        - input 자동 trim
+        ```html
+        <input v-model.trim="msg">
+        ```
